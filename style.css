@@ -1,0 +1,210 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F7E9DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+main{
+    width: 450px;
+    height: 550px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.balance h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+.balance h4{
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+}
+
+.dashBoard{
+    width: 100%;
+    height: calc(100% - 120px);
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerDashBoard{
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.innerDashBoard h1{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
+.chartContainer{
+    width: 100%;
+    height: 220px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.charts{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.chart{
+    width: 12%;
+    height: 90%;
+    background-color: hsl(10, 79%, 65%);
+    border-start-start-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+.topAmount{
+    position: absolute;
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-size: .8rem;
+    font-weight: 400;
+    top: -30px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: 1s ease-in-out;
+}
+.hidden{
+    display: none;
+    overflow: hidden;
+}
+.days{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.days .day{
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(28, 10%, 53%);
+}
+.day h5{
+    font-weight: 600;
+}
+.UsedBalance{
+    width: 100%;
+    height: calc(100% - 280px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.UsedInweek h1{
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+}
+.UsedInweek h2{
+    font-size: 1rem;
+    color: hsl(28, 10%, 53%);
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+.previousWeek{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.previousWeek h3{
+    font-size: 1rem;
+}
+.previousWeek h4{
+    font-size: 1rem;
+    color: hsl(28, 10%, 53%);
+    font-weight: 400;
+}
+.previousWeek h4:hover + .previousWeek h3 {
+    background-color: pink;
+}
+
+@media (max-width: 500px) {
+    main{
+        width: 95vw;
+    }
+    .balance h2{
+        font-size: 7vw;
+    }
+    .innerDashBoard{
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+    }    
+    .innerDashBoard>h1{
+        font-size: 6vw;
+    }
+    .UsedInweek h1{
+        font-size: 10vw;
+    }
+    .UsedInweek h2{
+        font-size: .8rem;
+    }
+    .previousWeek h4{
+        font-size: .8rem;
+    }
+}
+@media (max-width: 400px) {
+    .balance h2{
+        font-size: 8.5vw;
+    }
+    .balance h4{
+        font-size: .9rem;
+    }
+}
+@media (max-width: 300px) {
+    .balance h4{
+        font-size: .8rem;
+    }
+    .innerDashBoard{
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+    }
+    main{
+        height: 500px;
+    }    
+}
